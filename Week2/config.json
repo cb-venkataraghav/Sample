@@ -1,0 +1,145 @@
+{
+       
+   "Customer Id":
+   {
+     "change": 0,
+     "comment": "no change"
+
+
+   },
+   
+   "Subscription Id":
+   {
+     "change": 0,
+     "comment": "no change"
+
+
+   },
+   
+   "Invoice Number":
+   {
+     "change": 0,
+     "comment": "no change"
+
+
+   },
+
+   "Invoice Date":
+   {
+     
+     "change":3,
+     "comment": "parsing date",
+     "format" : "MM/dd/yyyy HH:mm:ss"
+
+
+   },
+   
+   "Start Date":
+   {
+     
+     "change":3,
+     "comment": "parsing date",
+     "format" : "MM/dd/YYYY HH:mm:ss"
+
+
+   },
+   
+   "Amount":
+   
+   {
+     "change":1,
+     "comment":"divide by 100000",
+     "value": 100000
+   
+
+
+   },
+   
+   "Status": {
+   
+     "change" : 0,
+     "comment": "no change"
+
+
+   },
+   
+   "Paid On":
+   {
+     
+     "change": 0,
+     "comment": "no change"
+
+
+   },
+   "Next Retry":
+   {
+     
+     "change": 0,
+     "comment": "no change"
+
+
+   },
+
+   
+   "Refunded Amount":
+   {
+      "change":1,
+     "comment":"divide by 100",
+     "value": 100
+
+   },
+   "Recurring":
+   {
+     
+     "change": 0,
+     "comment": "no change"
+
+
+   },
+
+   
+   "First Invoice":
+   {
+     
+     "change": 0,
+     "comment": "no change"
+
+
+   },
+
+   "Customer First Name":
+   {
+     "change": 2,
+     "comment":"ADD TO JSON  OBJECT"
+   },
+   "Customer Last Name":
+   {
+     "change": 2,
+     "comment":"ADD TO JSON  OBJECT"
+   
+
+   },
+
+   "Customer Email":
+   {
+     "change": 2,
+     "comment":"ADD TO JSON  OBJECT"
+   
+
+   },
+   "Customer Company":
+   {
+     "change": 2,
+     "comment":"ADD TO JSON  OBJECT"
+   
+
+   },
+   "Tax Total":
+   {
+     "change":1,
+     "comment":"divide by 10",
+     "value": 10
+   
+
+   }
+}   
