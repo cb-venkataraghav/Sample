@@ -40,9 +40,9 @@ public class w3d5e1 {
             }
             
             
-            System.out.println("Search by 1.Name 2.Number");
+            System.out.println("Search by 1.Name 2.Number \n3.Add \nUpdate by 4.Name 5.Number");
             
-            String test_word;
+            String test_word,selection;
             
             switch(snr.nextInt()){
                     
@@ -91,6 +91,114 @@ public class w3d5e1 {
                     }
                     
                     break;
+                    
+                case 3:
+                    
+                    snr.nextLine();
+                    
+                    System.out.println("Enter name...");
+                    
+                    String name = snr.nextLine();
+                    
+                    System.out.println("Enter address...");
+                    
+                    String addr = snr.nextLine();
+                    
+                    System.out.println("Enter mobile...");
+                    
+                    String mob = snr.nextLine();
+                    
+                    System.out.println("Enter home...");
+                    
+                    String home = snr.nextLine();
+                    
+                    System.out.println("Enter work...");
+                    
+                    String work = snr.nextLine();
+                    
+                    st.executeUpdate("insert into contact_table values('"+name+"','"+addr+"','"+mob+"','"+home+"','"+work+"')");
+                    
+                    break;
+                    
+                case 4:
+                    
+                    snr.nextLine();
+                    
+                    System.out.println("Enter name whose details to be modified...");
+                    
+                    String m_name = snr.nextLine();
+                    
+                    System.out.println("Enter the item to be modified...1.Address 2.Mobile 3.Home 4.Work");
+                    
+                    selection="";
+                    
+                    switch(snr.nextInt()){
+                            
+                        case 1:
+                            selection = "addr";
+                            break;
+                            
+                        case 2:
+                            selection = "mob";
+                            break;
+                            
+                        case 3:
+                            selection = "home";
+                            break;
+                            
+                        case 4:
+                            selection = "work";
+                            break;
+                            
+                    }
+                    
+                    System.out.println("Enter the new value for "+selection+"...");
+                    
+                    snr.nextLine();
+                    
+                    st.executeUpdate("update contact_table set "+selection+"='"+snr.nextLine()+"' where name='"+m_name+"'");
+                    
+                    break;
+                    
+                case 5:
+                    
+                    snr.nextLine();
+                    
+                    System.out.println("Enter mobile whose details to be modified...");
+                    
+                    String m_mob = snr.nextLine();
+                    
+                    System.out.println("Enter the item to be modified...1.Name 2.Address 3.Home 4.Work");
+                    
+                    selection="";
+                    
+                    switch(snr.nextInt()){
+                            
+                        case 1:
+                            selection = "name";
+                            break;
+                            
+                        case 2:
+                            selection = "addr";
+                            break;
+                            
+                        case 3:
+                            selection = "home";
+                            break;
+                            
+                        case 4:
+                            selection = "work";
+                            break;
+                            
+                    }
+                    
+                    System.out.println("Enter the new value for "+selection+"...");
+                    
+                    snr.nextLine();
+                    
+                    st.executeUpdate("update contact_table set "+selection+"='"+snr.nextLine()+"' where mob='"+m_mob+"'");
+                    
+                    break;
             }
             
             con.close();
@@ -102,7 +210,7 @@ public class w3d5e1 {
             System.out.println(e.getLocalizedMessage());
             
         }
-    }  
+    }
     
 }
 
